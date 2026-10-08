@@ -1,0 +1,11 @@
+python3 - <<'EOF'
+width, height = 80, 25
+glider = {(1,1),(2,2),(0,3),(1,3),(2,3)}
+with open("pattern.txt", "w") as f:
+    for y in range(height):
+        row = ""
+        for x in range(width):
+            row += "#" if (x, y) in glider else "."
+        f.write(row + "\n")
+print("pattern.txt создан")
+EOF
