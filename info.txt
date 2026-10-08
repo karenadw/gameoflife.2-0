@@ -1,0 +1,21 @@
+Проверка:
+
+bash
+wc -l pattern.txt                 # должно быть 25
+awk '{ print length }' pattern.txt | sort -u   # должно быть 80
+
+🚀 Как собрать и запустить
+bash
+make fclean
+make
+./game_of_life < pattern.txt          # Linux / MSYS2 UCRT64
+./game_of_life.exe < pattern.txt      # MSYS2 UCRT64 (с расширением .exe)
+
+Управление
+Клавиша	Действие
+A / a	Ускорить
+Z / z	Замедлить
+P / p	Пауза / продолжить
+R / r	Рестарт с начальной конфигурации
+Q / q	Выход
+Пробел	Выход
